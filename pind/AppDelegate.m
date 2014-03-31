@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "MainMapViewController.h"
+#import "PinsViewController.h"
+#import "TagsViewController.h"
+#import "LocArray.h"
 
 @implementation AppDelegate
 
@@ -14,12 +18,32 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+      tabBarController = [[UITabBarController alloc] init];
+
+    MainMapViewController* mapVC = [[MainMapViewController alloc] init];
+    mapVC.title = @"map";
+    PinsViewController* pinsVC = [[PinsViewController alloc] init];
+    pinsVC.title = @"pins";
+    pinsVC.dataArray = [LocArray sharedInstance].locArray;
+    TagsViewController* tagsVC = [[TagsViewController alloc] init];
+    tagsVC.title = @"tags";
+    
+    UINavigationController* mapNav = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    UINavigationController* pinNav = [[UINavigationController alloc] initWithRootViewController:pinsVC];
+    UINavigationController* tagNav = [[UINavigationController alloc] initWithRootViewController:tagsVC];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:mapNav, pinNav, tagNav, nil];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = mapNav;
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+   self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self.window addSubview:tabBarController.view];
+   
     return YES;
 }
 
@@ -137,6 +161,7 @@
     
     return _persistentStoreCoordinator;
 }
+
 
 #pragma mark - Application's Documents directory
 
