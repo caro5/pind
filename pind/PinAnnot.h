@@ -17,7 +17,6 @@
     NSString* color;
    // MKPinAnnotationColor* color;
 }
-
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *subtitle;
 @property (nonatomic, copy) NSString *color;

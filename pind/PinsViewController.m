@@ -40,7 +40,6 @@
 
     if (fromTag == YES) {
         self.navigationItem.title = tagName;
-        NSLog(@"asdf");
     }
     
     

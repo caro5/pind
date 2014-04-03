@@ -24,7 +24,6 @@
 @property (strong, nonatomic) NSMutableString* tagString;
 
 @property(retain, nonatomic) MKMapView* map;
-
 @property (strong, nonatomic) Location* theLoc;
 
 @end

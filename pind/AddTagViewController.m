@@ -34,7 +34,7 @@
 {
     [super viewDidLoad];
     if (fromTagVC == NO) {
-    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
+        UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel:)];
         self.navigationItem.leftBarButtonItem = backButton;
     }
     UIBarButtonItem* saveButton = [[UIBarButtonItem alloc] initWithTitle:@"save" style:UIBarButtonItemStylePlain target:self action:@selector(save:)];
@@ -42,7 +42,7 @@
     
     addTagLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 80, 50, 30)];
     [addTagLabel setText:@"name"];
-     [self tagText].delegate = self;
+    [self tagText].delegate = self;
     
     tagText = [[UITextField alloc] initWithFrame:CGRectMake(90, 80, 180, 30)];
     tagText.borderStyle = UITextBorderStyleRoundedRect;
@@ -54,38 +54,31 @@
     tagText.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     tagText.delegate = self;
     
-    
     [self.view addSubview:addTagLabel];
     [self.view addSubview:tagText];
     [self.view addSubview:doneButton];
-
-
+    
 }
+
 -(void)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)save:(id)sender {
-    NSLog(@"save");
-   
     tagName = tagText.text;
     [Tag sharedInstance].tagName = tagName;
     aTag = [[Tag alloc] init];
     aTag.tagName = tagName;
     [[TagArray sharedInstance].tagArray addObject:aTag];
-
- 
+    
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.navigationController popToRootViewControllerAnimated:YES];
-    
 }
-
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
-
 
 - (void)didReceiveMemoryWarning
 {

@@ -22,3 +22,9 @@
 - (NSURL *)applicationDocumentsDirectory;
 
 @end
+
+
+//fix tag->pin->loc
+//tags and notes dont show up
+
+//searchTable opacity

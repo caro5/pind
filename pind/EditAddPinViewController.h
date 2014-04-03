@@ -9,21 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "Location.h"
 
-@interface EditAddPinViewController : UIViewController <UINavigationControllerDelegate> {
+@interface EditAddPinViewController : UIViewController <UINavigationControllerDelegate, UITextFieldDelegate> {
     @public
     Location* aLoc;
 }
 
-@property (strong, nonatomic) UITextField *nameField;
-@property (strong, nonatomic) UITextField *addrField;
-@property (strong, nonatomic) UITextField *noteField;
+@property (retain, nonatomic) UITextField *nameField;
+@property (retain, nonatomic) UITextField *addrField;
+@property (retain, nonatomic) UITextField *noteField;
 @property (strong, nonatomic) UIBarButtonItem *saveButton;
-@property (strong, nonatomic) UITextField *tagList;
+@property (retain, nonatomic) UITextField *tagList;
 @property (strong, nonatomic) NSMutableString* tagTexts;
 
 @property (strong, nonatomic) UIButton *addTags;
 
 @property(strong, nonatomic) NSString* locQueryName;
 @property(strong, nonatomic) NSString* locQueryAddr;
+
+-(void)cancel:(id)sender;
+-(void)save:(id)sender;
+-(void) addTag:(id)sender;
+
+
 
 @end

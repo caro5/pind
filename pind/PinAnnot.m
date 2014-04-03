@@ -23,12 +23,5 @@
     return self;
 }
 
-- (NSString *)title {
-    return [NSString stringWithFormat:@"%@", title];
-}
-
-- (NSString *)subtitle {
-    return [NSString stringWithFormat:@"%@", subtitle];
-}
 
 @end

@@ -10,4 +10,8 @@
 
 @interface TagsViewController : UITableViewController
 
+
+
+-(void) addTag:(id)sender;
+
 @end

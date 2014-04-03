@@ -75,6 +75,7 @@
     noteField.placeholder = @"add note";
     self.noteField.delegate = self;
     
+    
     addTags = [[UIButton alloc] initWithFrame:CGRectMake(90, 230, 150, 30)];
     addTags.backgroundColor = [UIColor grayColor];
     [addTags addTarget:self action:@selector(addTag:) forControlEvents:UIControlEventTouchUpInside];
@@ -87,18 +88,13 @@
     [self.view addSubview:noteField];
     [self.view addSubview:addTags];
     [self.view addSubview:tagList];
-    
-    // Do any additional setup after loading the view.
 }
 
 -(void)cancel:(id)sender {
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)save:(id)sender {
-    NSLog(@"save");
-    
     NSString* locName = nameField.text;
     NSString* noteString = noteField.text;
     aLoc = [[Location alloc] init];
@@ -107,7 +103,6 @@
     aLoc->address = addrField.text;
     aLoc->title = locName;
     aLoc->note = noteString;
-    NSLog(@"tagname : %@", [[Tag sharedInstance] tagName]);
     
     aLoc->locTags = [Location sharedInstance]->locTags;
     [[LocArray sharedInstance].locArray addObject:aLoc];
@@ -120,46 +115,20 @@
             }
         }
     }
-    
-    
-    NSLog(@"%f", aLoc->coordinate.latitude);
-    NSLog(@"%@", aLoc.title);
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.navigationController popToRootViewControllerAnimated:YES];
-    
-    
 }
 
 -(void) addTag:(id)sender {
-    NSLog(@"in addTag");
-    //    TagsViewController *tagsVC = [[TagsViewController alloc] initWithStyle:UITableViewCellAccessoryCheckmark];
-    //    AddTagViewController* addTagVC = [[AddTagViewController alloc] init];
-    //
-    //    UINavigationController* navVC = [[UINavigationController alloc] initWithRootViewController:addTagVC];
-    //    [self presentViewController:navVC animated:YES completion:nil];
-    
-    
     NewPinAddTagViewController* npVC = [[NewPinAddTagViewController alloc] init];
     UINavigationController* naviVC = [[UINavigationController alloc] initWithRootViewController:npVC];
     [self presentViewController:naviVC animated:YES completion:nil];
-    
 }
-
-//- (void)addPin:(id)sender {
-//    NSLog(@"here in addPin");
-//    EditAddPinViewController *edAddVC = [[EditAddPinViewController alloc] init];
-//    UINavigationController * navVC = [[UINavigationController alloc] init];
-//    [navVC pushViewController:edAddVC animated:NO];
-//    [Location sharedInstance]->loc = locManager.location;
-//    [Location sharedInstance]->coordinate = locManager.location.coordinate;
-//    [self presentViewController:navVC animated:YES completion:nil];
-//}
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return YES;
 }
-
 
 - (void)didReceiveMemoryWarning
 {

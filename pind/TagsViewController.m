@@ -95,7 +95,6 @@
     pinVC.dataArray = [[[TagArray sharedInstance].tagArray objectAtIndex:indexPath.row] locsWithTag];
     pinVC.fromTag = YES;
     pinVC.tagName = [[[TagArray sharedInstance].tagArray objectAtIndex:indexPath.row] tagName];
-    
     [[self navigationController] pushViewController:pinVC animated:YES];
     
 }
