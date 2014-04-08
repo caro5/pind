@@ -314,10 +314,10 @@
     double lat = currLoc.coordinate.latitude;
     double lon = currLoc.coordinate.longitude;
     
-    NSString* query = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000000&keyword=%@&sensor=false&key=AIzaSyDUpFeJLCoR6mMZgcqwN23ZI5eJ67sQvio", lat,lon, searchTerm];
+    NSString* query = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=5000000&keyword=%@&sensor=false&key=YOURKEY", lat,lon, searchTerm];
     
     //autocomplete query test
-    // NSString* query = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/autocomplete/json?sensor=true&input=%@&key=AIzaSyDUpFeJLCoR6mMZgcqwN23ZI5eJ67sQvio", searchTerm];
+    // NSString* query = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/autocomplete/json?sensor=true&input=%@&key=YOURKEY", searchTerm];
     
     NSURL* url = [NSURL URLWithString:query];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
