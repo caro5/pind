@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pind/EditAddPinViewController.m"
-            timestampString = "418067799.321188"
+            timestampString = "418579709.786866"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-save:"
             landmarkType = "5">
          </BreakpointContent>

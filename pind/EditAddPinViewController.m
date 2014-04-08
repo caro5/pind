@@ -15,6 +15,7 @@
 #import "LocArray.h"
 #import "Location.h"
 #import "EditAddTextField.h"
+#import <Parse/Parse.h>
 
 @interface EditAddPinViewController ()
 
@@ -115,6 +116,18 @@
             }
         }
     }
+//save to Parse
+    PFObject *pLoc = [PFObject objectWithClassName:@"Location"];
+    PFGeoPoint* geoPoint = [PFGeoPoint geoPointWithLocation:aLoc->loc];
+    [pLoc setObject:aLoc->title forKey:@"name"];
+    [pLoc setObject:geoPoint forKey:@"coordinate"];
+    [pLoc setObject:aLoc->address forKey:@"address"];
+    [pLoc setObject:aLoc->note forKey:@"note"];
+    [pLoc setObject:aLoc->locTags forKey:@"tags"];
+    
+    [pLoc saveInBackground];
+    
+    
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }

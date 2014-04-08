@@ -23,6 +23,11 @@
 		620FDC0718B805140019F87A /* EditAddPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 620FDC0618B805140019F87A /* EditAddPinViewController.m */; };
 		622FEC0B18CBE0240058C0AD /* EditAddTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 622FEC0A18CBE0240058C0AD /* EditAddTextField.m */; };
 		622FEC0E18CBE5F70058C0AD /* NewPinAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 622FEC0D18CBE5F70058C0AD /* NewPinAddTagViewController.m */; };
+		62391EF418F2FC8A004426D3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62391EF318F2FC8A004426D3 /* Parse.framework */; };
+		62391EF618F2FD67004426D3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62391EF518F2FD66004426D3 /* AudioToolbox.framework */; };
+		62391EF818F2FD74004426D3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62391EF718F2FD74004426D3 /* CoreLocation.framework */; };
+		62391EFA18F2FD80004426D3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 62391EF918F2FD80004426D3 /* libz.dylib */; };
+		62391EFC18F2FD8F004426D3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62391EFB18F2FD8F004426D3 /* StoreKit.framework */; };
 		6247B98618B5A52300BC2E09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6247B98518B5A52300BC2E09 /* Foundation.framework */; };
 		6247B98818B5A52300BC2E09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6247B98718B5A52300BC2E09 /* CoreGraphics.framework */; };
 		6247B98A18B5A52300BC2E09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6247B98918B5A52300BC2E09 /* UIKit.framework */; };
@@ -89,6 +94,11 @@
 		622FEC0A18CBE0240058C0AD /* EditAddTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAddTextField.m; sourceTree = "<group>"; };
 		622FEC0C18CBE5F70058C0AD /* NewPinAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPinAddTagViewController.h; sourceTree = "<group>"; };
 		622FEC0D18CBE5F70058C0AD /* NewPinAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPinAddTagViewController.m; sourceTree = "<group>"; };
+		62391EF318F2FC8A004426D3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		62391EF518F2FD66004426D3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		62391EF718F2FD74004426D3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		62391EF918F2FD80004426D3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		62391EFB18F2FD8F004426D3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		6247B98218B5A52300BC2E09 /* pind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6247B98518B5A52300BC2E09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6247B98718B5A52300BC2E09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +140,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62391EFC18F2FD8F004426D3 /* StoreKit.framework in Frameworks */,
+				62391EFA18F2FD80004426D3 /* libz.dylib in Frameworks */,
+				62391EF818F2FD74004426D3 /* CoreLocation.framework in Frameworks */,
+				62391EF618F2FD67004426D3 /* AudioToolbox.framework in Frameworks */,
 				620D579218D7FFAF00ED21B5 /* SystemConfiguration.framework in Frameworks */,
 				620D578E18D7FF9200ED21B5 /* Security.framework in Frameworks */,
 				620D578C18D7FF8600ED21B5 /* QuartzCore.framework in Frameworks */,
@@ -140,6 +154,7 @@
 				6247B98C18B5A52300BC2E09 /* CoreData.framework in Frameworks */,
 				6247B98A18B5A52300BC2E09 /* UIKit.framework in Frameworks */,
 				6247B98618B5A52300BC2E09 /* Foundation.framework in Frameworks */,
+				62391EF418F2FC8A004426D3 /* Parse.framework in Frameworks */,
 				642FF334699A4192BD83060F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +195,7 @@
 		6247B97918B5A52200BC2E09 = {
 			isa = PBXGroup;
 			children = (
+				62391EF318F2FC8A004426D3 /* Parse.framework */,
 				6247B98D18B5A52300BC2E09 /* pind */,
 				6247B9AA18B5A52400BC2E09 /* pindTests */,
 				6247B98418B5A52300BC2E09 /* Frameworks */,
@@ -200,6 +216,10 @@
 		6247B98418B5A52300BC2E09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62391EFB18F2FD8F004426D3 /* StoreKit.framework */,
+				62391EF918F2FD80004426D3 /* libz.dylib */,
+				62391EF718F2FD74004426D3 /* CoreLocation.framework */,
+				62391EF518F2FD66004426D3 /* AudioToolbox.framework */,
 				620D579118D7FFAF00ED21B5 /* SystemConfiguration.framework */,
 				620D578F18D7FF9B00ED21B5 /* RestKit.framework */,
 				620D578D18D7FF9200ED21B5 /* Security.framework */,
@@ -553,14 +573,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/carolinewong/Desktop/pind,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pind/pind-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 				);
 				INFOPLIST_FILE = "pind/pind-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -571,14 +596,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/carolinewong/Desktop/pind,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "pind/pind-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include\n/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
 				);
 				INFOPLIST_FILE = "pind/pind-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

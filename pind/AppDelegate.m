@@ -11,6 +11,7 @@
 #import "PinsViewController.h"
 #import "TagsViewController.h"
 #import "LocArray.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -21,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"nVA16qYYerR1q365i6psvvZg3pOWOM5qqXTegWSC"
+                  clientKey:@"49ltrh4tOQc6aT9Yd9lX9Oq5zht2ZmYvydafXDSw"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
       tabBarController = [[UITabBarController alloc] init];
 
     MainMapViewController* mapVC = [[MainMapViewController alloc] init];
