@@ -22,8 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [Parse setApplicationId:@"nVA16qYYerR1q365i6psvvZg3pOWOM5qqXTegWSC"
-                  clientKey:@"49ltrh4tOQc6aT9Yd9lX9Oq5zht2ZmYvydafXDSw"];
+    [Parse setApplicationId:@""
+                  clientKey:@""];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
       tabBarController = [[UITabBarController alloc] init];
